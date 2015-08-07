@@ -3,9 +3,15 @@
 import dicom
 import sys #potrebná ?
 from glob import glob
+
+def farebny_text(text, vybrana_farba):
+    ukoncenie_farby = "\033[1;m"
+    farby = {"fialova":"\033[1;34m", "zlta":"\033[1;33m"}
+    return farby[vybrana_farba] + text + ukoncenie_farby
+
 # k vyhľadávaniu spraviť progres bar lebo to fakt dlho trvá
 #hlavný program
-print "\n\033[1;34mDICOMP\n\033[1;m"
+print(farebny_text("\nDICOMP\n", "fialova"))
 print "\033[1;32mPROGRAM SPRACÚVA ÚDAJE Z CELEJ DATABÁZY. OPERÁCIA TRVÁ NIEKOĽKO MINÚT, ČAKAJTE PROSÍM.\033[1;m"
 name=[]  #pole so všetkými menami
 print "\n"
