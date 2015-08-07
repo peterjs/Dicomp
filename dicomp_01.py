@@ -11,7 +11,7 @@ def farebny_text(text, vybrana_farba):
 
 # k vyhľadávaniu spraviť progres bar lebo to fakt dlho trvá
 #hlavný program
-print "\n\033[1;34mDICOMP\n\033[1;m"
+print(farebny_text("\nDICOMP\n", "fialova"))
 print "\033[1;32mPROGRAM SPRACÚVA ÚDAJE Z CELEJ DATABÁZY. OPERÁCIA TRVÁ NIEKOĽKO MINÚT, ČAKAJTE PROSÍM.\033[1;m"
 name=[]  #pole so všetkými menami
 print "\n"
